@@ -35,3 +35,15 @@
     </form>
   </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  // Select the hidden input field
+  const hiddenInput = document.querySelector('input[name="_next"]');
+  
+  if (hiddenInput) {
+        // Replace the value with window.location.origin + "/thanks.html"
+        hiddenInput.value = `${window.location.origin}/thanks.html`;
+    }
+});
+
+</script>
