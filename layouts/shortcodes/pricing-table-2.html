@@ -1,5 +1,5 @@
 {{ $data := .Inner | unmarshal }}
-<section class="bg-white dark:bg-gray-900">
+<section class="bg-white dark:bg-secondary-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         {{ with $data.title }}
         <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
@@ -12,7 +12,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {{ range $index, $plan := $data.plans }}
-            <div class="relative flex flex-col p-6 {{ if $plan.featured }}bg-primary-600 text-white{{ else }}bg-white dark:bg-gray-800{{ end }} rounded-2xl shadow-xl transform hover:-translate-y-1 transition duration-300">
+            <div class="relative flex flex-col p-6 {{ if $plan.featured }}bg-primary-600 text-white{{ else }}bg-white dark:bg-secondary-800{{ end }} rounded-2xl shadow-xl transform hover:-translate-y-1 transition duration-300">
                 {{ if $plan.featured }}
                 <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span class="bg-yellow-400 text-gray-900 text-xs font-semibold px-4 py-1 rounded-full">Most Popular</span>

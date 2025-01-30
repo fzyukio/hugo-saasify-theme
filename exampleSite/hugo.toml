@@ -36,7 +36,7 @@ paginatePath = "page"
     enable = true
     title = "Ready to Build Your SaaS Website?"
     description = "Join companies already using our theme to create beautiful, high-performance websites."
-    gradient_from = "#2563eb"  # Indigo-600
+    gradient_from = "#D68C45"  # Indigo-600
     gradient_to = "#7c3aed"    # Purple-600
     gradient_angle = 30
     [params.cta.primary_button]
