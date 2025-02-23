@@ -7,10 +7,10 @@ description: "Learn about our mission, leadership team, and the investors backin
 {{< section-container class="bg-gradient-to-b from-blue-50 via-blue-50 to-white pt-20 pb-32" >}}
     <div class="text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">Building the Future of SaaS</h1>
-        <p class="text-xl text-gray-600 mb-16">We're on a mission to revolutionize how businesses operate in the digital age</p>
+        <p class="text-xl text-text-900 mb-16">We're on a mission to revolutionize how businesses operate in the digital age</p>
         <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-sm p-8">
             <h2 class="text-3xl font-bold mb-4">Our Mission</h2>
-            <p class="text-xl text-gray-600">
+            <p class="text-xl text-text-900">
                 We're dedicated to empowering businesses with innovative SaaS solutions that drive growth and efficiency. Our platform combines cutting-edge technology with intuitive design to solve complex business challenges.
             </p>
         </div>

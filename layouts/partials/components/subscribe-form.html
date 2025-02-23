@@ -1,6 +1,6 @@
 <div class="bg-primary-50 p-6 rounded-lg">
     <h3 class="text-lg font-bold text-gray-900 mb-2">{{ .title | default "Subscribe to Newsletter" }}</h3>
-    <p class="text-sm text-gray-600 mb-4">{{ .description | default "Get the latest posts delivered right to your inbox." }}</p>
+    <p class="text-sm text-text-900 mb-4">{{ .description | default "Get the latest posts delivered right to your inbox." }}</p>
     
     <form action="{{ .action | default "#" }}" method="POST" class="space-y-3">
         {{ with .hidden }}

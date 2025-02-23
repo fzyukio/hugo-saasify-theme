@@ -1,32 +1,45 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class', // Enables dark mode toggling
   content: ["./layouts/**/*.html"],
   theme: {
     extend: {
       colors: {
         primary: {
-          50: '#eef1fc',
-          100: '#dde3f9',
-          200: '#bbc7f3',
-          300: '#99abec',
-          400: '#778fe6',
-          500: '#D68C45',
-          600: '#D68C45',
-          700: '#6A3E2E',
-          800: '#283680',
-          900: '#1b2456',
+          50: 'var(--colorPrimary-50)',
+          100: 'var(--colorPrimary-100)',
+          200: 'var(--colorPrimary-200)',
+          300: 'var(--colorPrimary-300)',
+          400: 'var(--colorPrimary-400)',
+          500: 'var(--colorPrimary-500)',
+          600: 'var(--colorPrimary-600)',
+          700: 'var(--colorPrimary-700)',
+          800: 'var(--colorPrimary-800)',
+          900: 'var(--colorPrimary-900)',
         },
-        secondary: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7e22ce',
-          800: '#474846',
-          900: '#2C2C2C',
+        text: {
+          50: 'var(--colorTextPrimary-50)',
+          100: 'var(--colorTextPrimary-100)',
+          200: 'var(--colorTextPrimary-200)',
+          300: 'var(--colorTextPrimary-300)',
+          400: 'var(--colorTextPrimary-400)',
+          500: 'var(--colorTextPrimary-500)',
+          600: 'var(--colorTextPrimary-600)',
+          700: 'var(--colorTextPrimary-700)',
+          800: 'var(--colorTextPrimary-800)',
+          900: 'var(--colorTextPrimary-900)',
+        },
+        bg: {
+          50: 'var(--colorBgPrimary-50)',
+          100: 'var(--colorBgPrimary-100)',
+          200: 'var(--colorBgPrimary-200)',
+          300: 'var(--colorBgPrimary-300)',
+          400: 'var(--colorBgPrimary-400)',
+          500: 'var(--colorBgPrimary-500)',
+          600: 'var(--colorBgPrimary-600)',
+          700: 'var(--colorBgPrimary-700)',
+          800: 'var(--colorBgPrimary-800)',
+          900: 'var(--colorBgPrimary-900)',
         },
       },
       fontFamily: {
@@ -39,4 +52,4 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
   ],
-}
+};

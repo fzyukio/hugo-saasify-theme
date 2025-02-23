@@ -10,7 +10,8 @@
 
 {{ $features := split (.Get "features") ";" }}
 
-<div class="grid lg:grid-cols-2 gap-12 items-center" style="--badge-color: {{ $badgeColor }}">
+<!-- <div class="grid lg:grid-cols-2 gap-12 items-center" style="--badge-color: {{ $badgeColor }}"> -->
+<div class="grid lg:grid-cols-2 gap-12 items-center">
     {{ if eq $imagePosition "left" }}
     <div class="order-2 lg:order-1">
         <img src="{{ $image | relURL }}" alt="{{ $title }}" class="rounded-xl shadow-elevation">
@@ -20,14 +21,14 @@
     <div class="space-y-6 {{ if eq $imagePosition "left" }}order-1 lg:order-2{{ end }}">
         <style>
             .badge {
-                background-color: color-mix(in srgb, var(--badge-color) 10%, transparent);
-                color: var(--badge-color);
+                background-color: color-mix(in srgb, var(--colorPrimary-700) 10%, transparent);
+                color: var(--colorPrimary-700);
             }
             .badge-icon {
-                color: var(--badge-color);
+                color: var(--colorPrimary-700);
             }
             .learn-more-btn {
-                background-color: var(--badge-color);
+                background-color: var(--colorPrimary-700);
             }
             .feature-text {
                 width: calc(100% - 1.25rem);
@@ -36,7 +37,7 @@
         </style>
         <div class="badge inline-block px-4 py-2 rounded-full font-medium">{{ $badge }}</div>
         <h3 class="text-2xl md:text-3xl font-bold">{{ $title }}</h3>
-        <p class="text-lg text-gray-600">{{ $description }}</p>
+        <p class="text-lg text-text-900">{{ $description }}</p>
         <ul class="space-y-4">
             {{ range $features }}
             <li class="flex items-center space-x-3">

@@ -75,7 +75,7 @@
                 {{ $tagCount := .Site.Params.blog.sidebar.tags.count | default 20 }}
                 {{ range first $tagCount .Site.Taxonomies.tags.ByCount }}
                     <a href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}"
-                       class="text-sm text-gray-600 hover:text-primary-600">
+                       class="text-sm text-text-900 hover:text-primary-600">
                         #{{ .Name }}
                         <span class="text-gray-500">({{ .Count }})</span>
                     </a>

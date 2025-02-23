@@ -3,7 +3,7 @@
 
 <div class="text-center mb-16">
   <h2 class="text-3xl font-bold mb-4">{{ $title }}</h2>
-  <p class="text-xl text-gray-600">{{ $subtitle }}</p>
+  <p class="text-xl text-text-900">{{ $subtitle }}</p>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -17,7 +17,7 @@
             {{ partial "icons" (dict "name" (index $parts 0) "color" (index $parts 1) "size" "6") }}
           </div>
           <h3 class="text-xl font-bold mb-2">{{ index $parts 2 }}</h3>
-          <p class="text-gray-600">{{ index $parts 3 }}</p>
+          <p class="text-text-900">{{ index $parts 3 }}</p>
         </div>
       {{ end }}
     {{ end }}

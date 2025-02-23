@@ -1,4 +1,4 @@
-<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<article class="bg-bg-secondary rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
     {{ with .Params.featured_image }}
         <a href="{{ $.RelPermalink }}" class="block aspect-w-16 aspect-h-9 overflow-hidden">
             <img 
@@ -29,7 +29,7 @@
         </h2>
 
         <!-- Description -->
-        <p class="text-gray-600 mb-4 line-clamp-2">
+        <p class="text-text-900 mb-4 line-clamp-2">
             {{ with .Description }}
                 {{ . }}
             {{ else }}
@@ -61,7 +61,7 @@
         <!-- Read More link and Reading Time -->
         <div class="flex justify-between items-center">
             <a href="{{ .RelPermalink }}" 
-               class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+               class="inline-flex items-center text-primary-600 hover:text-text-900 font-medium">
                 Read More
                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

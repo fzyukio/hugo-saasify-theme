@@ -3178,7 +3178,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
 }
 
-.text-gray-600 {
+.text-text-900 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
 }
@@ -4257,7 +4257,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(2 132 199 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-primary-700:hover {
+.hover\:text-text-900:hover {
   --tw-text-opacity: 1;
   color: rgb(3 105 161 / var(--tw-text-opacity, 1));
 }
@@ -4344,7 +4344,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(2 132 199 / var(--tw-text-opacity, 1));
 }
 
-.group:hover .group-hover\:text-primary-700 {
+.group:hover .group-hover\:text-text-900 {
   --tw-text-opacity: 1;
   color: rgb(3 105 161 / var(--tw-text-opacity, 1));
 }

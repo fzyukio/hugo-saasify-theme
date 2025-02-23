@@ -65,7 +65,7 @@
   }
 
   .nav-link {
-    @apply text-gray-600 hover:text-primary-600 font-bold transition duration-200;
+    @apply text-text-900 hover:text-primary-600 font-bold transition duration-200;
   }
 
   .feature-grid {
@@ -146,7 +146,7 @@
   }
 
   .prose a {
-    @apply text-primary-600 hover:text-primary-700 no-underline;
+    @apply text-primary-600 hover:text-text-900 no-underline;
   }
 
   .prose ul, .prose ol {
