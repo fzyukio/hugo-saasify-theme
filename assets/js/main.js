@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // State variables
 let currentTheme = localStorage.getItem("theme") || "theme-default";
-let isDarkMode = localStorage.getItem("dark-mode") === "enabled";
+let isDarkMode = localStorage.getItem("dark-mode") !== "disabled";
 
 // Theme colors mapping
 const themeColors = {
@@ -85,16 +85,23 @@ function setTheme(theme) {
 // Updates all elements that are color and mode responsive
 function applyColorAndMode() {
   // Get mode directly from localStorage instead of checking body class
-  const mode = localStorage.getItem("dark-mode") === "enabled" ? "dark" : "bright";
+  const mode = isDarkMode ? "dark" : "bright";
+  const colorTheme = currentTheme.replace("theme-", "");
 
   document.querySelectorAll(".color-and-mode-responsive").forEach((element) => {
-    const dataStyleTemplate = element.getAttribute("data-style");
-    if (dataStyleTemplate) {
-      const updatedStyle = dataStyleTemplate
-        .replace("{colorTheme}", currentTheme.replace("theme-", ""))
-        .replace("{mode}", mode);
-      element.setAttribute("style", updatedStyle);
-    }
+    // Iterate over all attributes and process only `data-*` attributes
+    Array.from(element.attributes).forEach((attr) => {
+      if (attr.name.startsWith("data-")) {
+        const propertyName = attr.name.replace("data-", ""); // Remove "data-" prefix
+        const template = attr.value;
+
+        // Replace __colorTheme__ and __mode__ placeholders
+        const updatedValue = template.replace("__colorTheme__", colorTheme).replace("__mode__", mode);
+
+        // Apply the new value to the appropriate property
+        element.setAttribute(propertyName, updatedValue);
+      }
+    });
   });
 }
 
