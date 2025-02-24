@@ -41,22 +41,7 @@
             <div class="relative">
                 {{ if $hero_image }}
                 <div class="relative z-10">
-                    <img src="{{ $hero_image | relURL }}" alt="Hero Image" class="rounded-xl shadow-elevation">
-                    
-                    <div class="flex items-center space-x-4">
-                        <!-- Accent Color Switchers -->
-                        <div class="w-8 h-8 bg-red-500 rounded-full cursor-pointer" onclick="setTheme('theme-red')"></div>
-                        <div class="w-8 h-8 bg-yellow-500 rounded-full cursor-pointer" onclick="setTheme('theme-yellow')"></div>
-                        <div class="w-8 h-8 bg-green-500 rounded-full cursor-pointer" onclick="setTheme('theme-green')"></div>
-                      
-                        <!-- Dark Mode Toggle -->
-                        <button id="dark-mode-toggle" class="p-2 border rounded bg-gray-300 dark:bg-gray-700">
-                          🌞 / 🌙
-                        </button>
-                      </div>
-                      
-                      
-                      
+                    <img src="{{ $hero_image | relURL }}" alt="Hero Image" class="rounded-xl shadow-elevation">  
                 </div>
 
                   

@@ -211,16 +211,16 @@
   --colorBgPrimary-900: #f9fafb;
 
   /* === Primary (Default: Yellow) === */
-  --colorPrimary-50: #fffbeb;
-  --colorPrimary-100: #fef3c7;
-  --colorPrimary-200: #fde68a;
-  --colorPrimary-300: #fcd34d;
-  --colorPrimary-400: #fbbf24;
-  --colorPrimary-500: #f59e0b;
-  --colorPrimary-600: #d97706;
-  --colorPrimary-700: #b45309;
-  --colorPrimary-800: #92400e;
-  --colorPrimary-900: #78350f;
+  --colorPrimary-50: #fff6f0;
+  --colorPrimary-100: #ffdcc2;
+  --colorPrimary-200: #ffbe91;
+  --colorPrimary-300: #ff9e5f;
+  --colorPrimary-400: #ff883d;
+  --colorPrimary-500: #ff701f;
+  --colorPrimary-600: #e6631b;
+  --colorPrimary-700: #c65418;
+  --colorPrimary-800: #a64614;
+  --colorPrimary-900: #ff7f2a;
 }
 
 .dark {
@@ -249,27 +249,224 @@
   --colorBgPrimary-900: #111827;
 }
 
-.theme-red {
-  --colorPrimary-50: #fef2f2;
-  --colorPrimary-100: #fee2e2;
-  --colorPrimary-200: #fecaca;
-  --colorPrimary-300: #fca5a5;
-  --colorPrimary-400: #f87171;
-  --colorPrimary-500: #ef4444;
-  --colorPrimary-600: #dc2626;
-  --colorPrimary-700: #b91c1c;
-  --colorPrimary-800: #991b1b;
-  --colorPrimary-900: #7f1d1d;
-}
 .theme-green {
-  --colorPrimary-50: #f0fdf4;
-  --colorPrimary-100: #dcfce7;
-  --colorPrimary-200: #bbf7d0;
-  --colorPrimary-300: #86efac;
-  --colorPrimary-400: #4ade80;
-  --colorPrimary-500: #22c55e;
-  --colorPrimary-600: #16a34a;
-  --colorPrimary-700: #15803d;
-  --colorPrimary-800: #166534;
-  --colorPrimary-900: #14532d;
+  --colorPrimary-50: #e3fbf1;
+  --colorPrimary-100: #b8f4dc;
+  --colorPrimary-200: #89eac2;
+  --colorPrimary-300: #5adfaa;
+  --colorPrimary-400: #2ed693;
+  --colorPrimary-500: #00c278;
+  --colorPrimary-600: #00a76f;
+  --colorPrimary-700: #00855a;
+  --colorPrimary-800: #006546;
+  --colorPrimary-900: #004530;
+}
+
+.theme-cyan {
+  --colorPrimary-50: #e1f3ff;
+  --colorPrimary-100: #b4dcff;
+  --colorPrimary-200: #81c3ff;
+  --colorPrimary-300: #4da9ff;
+  --colorPrimary-400: #2796f5;
+  --colorPrimary-500: #1088eb;
+  --colorPrimary-600: #0b6ec3;
+  --colorPrimary-700: #085497;
+  --colorPrimary-800: #06396b;
+  --colorPrimary-900: #078dee;
+}
+
+.theme-purple {
+  --colorPrimary-50: #f0e8ff;
+  --colorPrimary-100: #d5bbff;
+  --colorPrimary-200: #b78bff;
+  --colorPrimary-300: #9a5bff;
+  --colorPrimary-400: #8539f5;
+  --colorPrimary-500: #752ee0;
+  --colorPrimary-600: #5d26b8;
+  --colorPrimary-700: #481f8f;
+  --colorPrimary-800: #341766;
+  --colorPrimary-900: #7635dc;
+}
+
+.theme-blue {
+  --colorPrimary-50: #e5efff;
+  --colorPrimary-100: #bfd5ff;
+  --colorPrimary-200: #94b8ff;
+  --colorPrimary-300: #699aff;
+  --colorPrimary-400: #4a84f2;
+  --colorPrimary-500: #3b73e0;
+  --colorPrimary-600: #2f5db8;
+  --colorPrimary-700: #244892;
+  --colorPrimary-800: #1a336c;
+  --colorPrimary-900: #2065d1;
+}
+
+.theme-orange {
+  --colorPrimary-50: #fff4e5;
+  --colorPrimary-100: #ffe2b8;
+  --colorPrimary-200: #ffcc85;
+  --colorPrimary-300: #ffb652;
+  --colorPrimary-400: #fda92d;
+  --colorPrimary-500: #e08f26;
+  --colorPrimary-600: #c37720;
+  --colorPrimary-700: #a55e19;
+  --colorPrimary-800: #864512;
+  --colorPrimary-900: #682d0b;
+}
+
+.theme-red {
+  --colorPrimary-50: #ffeaea;
+  --colorPrimary-100: #ffcbcb;
+  --colorPrimary-200: #ff9e9e;
+  --colorPrimary-300: #ff7070;
+  --colorPrimary-400: #ff4f4f;
+  --colorPrimary-500: #ff4040;
+  --colorPrimary-600: #e63636;
+  --colorPrimary-700: #c62e2e;
+  --colorPrimary-800: #a62626;
+  --colorPrimary-900: #ff3030;
+}
+
+#color-menu {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.switch{
+  cursor: pointer;
+  display: block;
+  width: 90px;
+  height: 40px;
+  position: relative;
+  scale: 1;
+
+  input{
+   display:none;
+      
+    &:checked ~ .switch__background{
+      background-position: 20% 0%;
+      &:before{
+        opacity: 0.9;
+      }
+      
+      &:after{
+        transform: translateY(250%);
+        opacity: 0.5;
+      }
+    }
+    
+      &:checked ~ .switch__button{
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+        transition: 0.2s ease all;
+        box-shadow: inset 3px 5px 3px #edf1f9;
+        background: #c3c9d2;
+        
+       &:before{
+          content: "";
+          display: block;
+          position: absolute;
+          left: 15px;
+          top: 5px;
+          height: 9px;
+          width: 9px;
+          border-radius: 9px;
+          background: #949ead;
+          box-shadow: inset 2px 1px 1px #848e9b;
+        }
+        
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          left: 4px;
+          top: 13px;
+          height: 12px;
+          width: 12px;
+          border-radius: 12px;
+          background: #949ead;
+          box-shadow: inset 2px 2px 2px #848e9b;
+        }
+      }
+  }
+
+  .switch__button{
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: #f1c530;
+    position: absolute;
+    transition: 0.2s ease all;
+    box-shadow: inset 3px 5px 3px #f8a100;
+  }
+
+  .switch__background{
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    background: grey;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: inset -4px -4px 6px rgba(255, 255, 255, 0.3), 
+           inset 4px 4px 6px rgba(70, 70, 70, 0.12);
+    background: radial-gradient(
+      circle at center right,
+      #347ab2,
+      #347ab2 10%,
+      #4886b7 10%,
+      #4886b7 20%,
+      #5c93bf 20%,
+      #5c93bf 30%,
+      #699ec6 30%,
+      #699ec6 40%,
+      #494e5c 40%,
+      #494e5c 50%,
+      #404350 50%,
+      #404350 60%,
+      #2d333c 60%,
+      #2d333c 70%,
+      #242830 70%,
+      #242830 80%,
+      #111 80%,
+      #111 90%
+    );
+    
+    background-size: 250% 100%;
+    background-position: 100% 0%;
+    transition: 0.2s ease all;
+    overflow: hidden;
+    
+    &:before{
+      content: "★";
+      display: block;
+      position: absolute;
+      left: 12px;
+      top: 8px;
+      font-size: 8px;
+      color: white;
+      opacity: 0;
+      transition: 0.2s ease all;
+      text-shadow: 10px 10px 0px rgba(255, 255, 255, 0.8), 20px 5px 0px rgba(255, 255, 255, 1);
+    }
+    
+    &:after{
+      content: "";
+      display: block;
+      transition: 0.2s ease all;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      left: 5px;
+      border-radius: 25px;
+      box-shadow: 
+        30px 30px 0px rgba(255, 255, 255, 1),
+        50px 20px 0px rgba(255, 255, 255, 1),
+        65px 25px 0px rgba(255, 255, 255, 1),
+        29px 28px 0px rgba(215, 215, 215, 1),
+        49px 18px 0px rgba(215, 215, 215, 1),
+        65px 23px 0px rgba(215, 215, 215, 1);
+    }
+}
 }

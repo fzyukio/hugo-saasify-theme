@@ -17,17 +17,33 @@
                     {{ end }}
                 </a>
 
-                <div class="flex items-center space-x-4">
-                    <!-- Accent Color Switchers -->
-                    <div class="w-8 h-8 bg-red-500 rounded-full cursor-pointer" onclick="setTheme('theme-red')"></div>
-                    <div class="w-8 h-8 bg-yellow-500 rounded-full cursor-pointer" onclick="setTheme('theme-yellow')"></div>
-                    <div class="w-8 h-8 bg-green-500 rounded-full cursor-pointer" onclick="setTheme('theme-green')"></div>
+                <div class="flex items-center space-x-4 relative">
+                    <!-- Primary Color Picker -->
+                    <div class="relative">
+                      <div id="color-picker" class="w-10 h-10 rounded-full cursor-pointer border-2 border-gray-300"></div>
+                      
+                      <!-- Pop-down Menu -->
+                      <div id="color-menu" class="absolute mt-2 left-0 w-40 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-2 hidden">
+                        <div class="grid grid-cols-4 gap-2">
+                          <div class="w-8 h-8 bg-[#FF7F2A] rounded-full cursor-pointer" onclick="setTheme('theme-default')"></div>
+                          <div class="w-8 h-8 bg-[#00a76f] rounded-full cursor-pointer" onclick="setTheme('theme-green')"></div>
+                          <div class="w-8 h-8 bg-[#078DEE] rounded-full cursor-pointer" onclick="setTheme('theme-cyan')"></div>
+                          <div class="w-8 h-8 bg-[#7635DC] rounded-full cursor-pointer" onclick="setTheme('theme-purple')"></div>
+                          <div class="w-8 h-8 bg-[#2065D1] rounded-full cursor-pointer" onclick="setTheme('theme-blue')"></div>
+                          <div class="w-8 h-8 bg-[#FDA92D] rounded-full cursor-pointer" onclick="setTheme('theme-orange')"></div>
+                          <div class="w-8 h-8 bg-[#FF3030] rounded-full cursor-pointer" onclick="setTheme('theme-red')"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <label class="switch">
+                        <input type="checkbox">
+                        <div class="switch__button"></div>
+                        <div class="switch__background"></div>
+                      </label>
                   
-                    <!-- Dark Mode Toggle -->
-                    <button id="dark-mode-toggle" class="p-2 border rounded bg-gray-300 dark:bg-gray-700">
-                      🌞 / 🌙
-                    </button>
                   </div>
+                  
 
                 <!-- Navigation -->
                 <div class="hidden md:flex items-center {{ with $headerConfig.menu.spacing }}{{ . }}{{ else }}space-x-8{{ end }}">
