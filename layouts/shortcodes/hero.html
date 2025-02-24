@@ -40,8 +40,22 @@
             </div>
             <div class="relative">
                 {{ if $hero_image }}
+
                 <div class="relative z-10">
-                    <img src="{{ $hero_image | relURL }}" alt="Hero Image" class="rounded-xl shadow-elevation">  
+                    <div class="macbook">
+                        <div class="screen">
+                            <div class="viewport color-and-mode-responsive" data-style="background-image:url('/images/hero/rostiny-{colorTheme}-{mode}.png');"></div>
+                        </div>
+                        <div class="base"></div>
+                        <div class="notch"></div>
+                    
+                        <!-- Mirrored Reflection -->
+                        <div class="reflection">
+                            <div class="base-reflection"></div>
+                            <div class="notch-reflection"></div>
+                        </div>
+                    </div>
+                                   
                 </div>
 
                   
